@@ -2,25 +2,29 @@ import { Hidden, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import HomeIcon from "../../assets/icons/icon-nav-home.svg"
+import MoviesIcon from "../../assets/icons/icon-nav-movies.svg"
+import TvseriesIcon from "../../assets/icons/icon-nav-tv-series.svg"
+import BookmarksIcon from "../../assets/icons/icon-nav-bookmark.svg"
 const navLinks = [
   {
     name: "Home",
-    icon: "H",
+    icon: HomeIcon,
     link: "/"
   },
   {
     name: "Movies",
-    icon: "H",
+    icon: MoviesIcon,
     link: "/movies"
   },
   {
     name: "Tv Series",
-    icon: "H",
+    icon: TvseriesIcon,
     link: "/tv-series"
   },
   {
     name: "Book Marks",
-    icon: "H",
+    icon: BookmarksIcon,
     link: "/bookmarks"
   }
 ];
