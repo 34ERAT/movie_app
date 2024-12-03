@@ -14,11 +14,15 @@ const Home = () => {
   const [searchList, setSearchList] = useState<MovieDataType[]>([]);
   const { state } = useContext(MovieContext);
   const { movies } = state;
-  const trendingList: movie.fillter((item) => item.isTrending === true);
-  const recommendList: any = [];
+  const trendingList = movies.filter((item) => item.isTrending === true);
+  const recommendList = movies.filter((item) => item.isTrending !== true);
 
   const handleSearch = (e: { target: { value: SetStateAction<string> } }) => {
     setSearch(e.target.value)
+    const newList = movies.filter((movie) =>
+      movie.title.toLowerCase().includes(search.toLowerCase())
+    );
+    setSearchList(newList)
   }
   return (
     <Layout>
@@ -56,7 +60,7 @@ const Home = () => {
           <Box width="100%">
             <Box width="100%">
               <Typography variant="h5" component="h1" my={6} fontWeight={400} > Trending </Typography>
-              <MovieTrendList trendingLIst={trendingList} />
+              <MovieTrendList trendingList={trendingList} />
             </Box>
             <Box width="100%">
               <Typography variant="h5" component="h1" my={6} fontWeight={400} > Recommended For You</Typography>

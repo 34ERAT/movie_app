@@ -44,7 +44,7 @@ export const MovieProvider = ({ children }: MovieContextProps) => {
   const [state, dispatch] = useReducer(MovieReducer, initalMovieState)
   return (
     <MovieContext.Provider value={{ state, dispatch }}>
-      children{ }
+      {children}
     </MovieContext.Provider>
   )
 }
