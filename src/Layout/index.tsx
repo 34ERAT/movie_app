@@ -24,7 +24,11 @@ const Layout = ({ children }: LayoutProps) => {
       <Sidebar />
       <Box sx={{
         width: "100%",
-        overflowY: "scroll"
+        overflowY: "scroll",
+        scrollbarWidth: "none",
+        "&::webkit-scrollbar": {
+          display: "none",
+        }
       }}>{children}</Box>
     </Box>
   )

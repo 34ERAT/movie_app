@@ -4,7 +4,7 @@ import { MovieProvider } from "./components/context/movie-context";
 import { router } from "./routes";
 const App = () => {
   return <MovieProvider>
-    <RouterProvider router={router} />;
+    <RouterProvider router={router} />
   </MovieProvider>
 
 }
