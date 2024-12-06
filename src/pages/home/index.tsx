@@ -82,7 +82,8 @@ const Home = () => {
           </Box>
         ) : (
           <Box width="100%">
-            <Typography>Found</Typography>
+            <Typography>Found {searchList.length} results for "{search}" {""}</Typography>
+            <MovieList recommendList={searchList} />
           </Box>
         )}
       </Box>

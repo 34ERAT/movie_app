@@ -25,7 +25,7 @@ const navLinks = [
   {
     name: "Book Marks",
     icon: BookmarksIcon,
-    link: "/bookmarks"
+    link: "/bookmark"
   }
 ];
 
